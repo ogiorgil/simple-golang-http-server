@@ -1,0 +1,1 @@
+echo "GET http://localhost:8080?num=42" | vegeta attack -duration=5s -rate=10 | vegeta report

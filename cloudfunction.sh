@@ -1,0 +1,1 @@
+echo "GET https://go-http-function-o6nzyvvcaa-as.a.run.app/?num=42" | vegeta attack -duration=5s -rate=10 | vegeta report

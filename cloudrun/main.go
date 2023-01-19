@@ -6,6 +6,7 @@ import (
 	"strconv"
 )
 
+// 1 1 2 3 5 8 13 ...
 func fibonacci(n int64) int64 {
 	if n <= 1 {
 		return n
@@ -16,7 +17,7 @@ func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		numParam := r.URL.Query().Get("num")
-		fmt.Println("Received request: ", numParam)
+		fmt.Println("Received request (new): ", numParam)
 
 		num, err := strconv.ParseInt(numParam, 10, 64)
 		if err != nil {
